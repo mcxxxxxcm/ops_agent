@@ -1,0 +1,15 @@
+2024-01-15 10:23:45 ERROR [UserService] 用户登录失败: 用户名或密码错误
+2024-01-15 10:24:12 ERROR [DatabaseService] 数据库连接超时: Connection timeout after 30s
+2024-01-15 10:24:13 ERROR [DatabaseService] 重试连接失败: Max retries exceeded
+java.sql.SQLException: Connection refused
+	at com.example.db.ConnectionPool.getConnection(ConnectionPool.java:142)
+	at com.example.service.UserService.authenticate(UserService.java:89)
+2024-01-15 10:25:30 ERROR [PaymentService] 支付网关响应异常: HTTP 503 Service Unavailable
+2024-01-15 10:26:15 WARN [CacheService] 缓存命中率低于阈值: 45% (threshold: 60%)
+2024-01-15 10:27:00 ERROR [OrderService] 订单创建失败: 库存不足, productId=12345
+2024-01-15 10:28:30 ERROR [APIGateway] 上游服务不可用: http://inventory-service:8080/health
+2024-01-15 10:29:45 ERROR [Scheduler] 定时任务执行失败: NullPointerException
+java.lang.NullPointerException: Cannot invoke method on null object
+	at com.example.scheduler.ReportGenerator.generate(ReportGenerator.java:78)
+2024-01-15 10:30:20 INFO [SystemService] 系统健康检查: CPU 45%, Memory 62%, Disk 78%
+2024-01-15 10:31:00 ERROR [SecurityService] 检测到异常登录尝试: IP=192.168.1.100, attempts=5
