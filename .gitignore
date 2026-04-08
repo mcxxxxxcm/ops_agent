@@ -43,7 +43,11 @@ logs/
 
 # Output
 output/
+!output/.gitkeep
+
+# Markdown (except README)
 *.md
+!README.md
 
 # OS
 .DS_Store
